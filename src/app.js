@@ -18,15 +18,6 @@ store.subscribe(() => {
   console.log(visibleExpenses);
 });
 
-const waterBill = store.dispatch(addExpense({ description: 'Water Bill', amount: 100, createdAt: 5000 }));
-const gasBill = store.dispatch(addExpense({ description: 'Gas Bill', amount: 500, createdAt: 1000 }));
-const Rent = store.dispatch(addExpense({ description: 'Rent', amount: 5500, createdAt: 109500 }));
-// store.dispatch(setTextFilter('bill'));
-
-// setTimeout(() => {
-//   store.dispatch(setTextFilter('rent'));
-// }, 3000)
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
