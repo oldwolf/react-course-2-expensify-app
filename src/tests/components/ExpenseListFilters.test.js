@@ -59,7 +59,7 @@ test('should sort by date', () => {
       value: { value }
     }
   });
-
+  
   expect(sortByDate).toHaveBeenCalled();
 });
 
@@ -79,7 +79,7 @@ test('should handle date changes', () => {
   const startDate = moment(0).add(4, 'years');
   const endDate = moment(0).add(8, 'years');
 
-  wrapper.find('DateRangePicker').prop('onFocusChange')({ startDate, endDate });
+  wrapper.children('DateRangePicker').prop('onFocusChange')({ startDate, endDate });
 
   expect(setStartDate).toHaveBeenLastCalledWith(startDate);
   expect(setEndDate).toHaveBeenLastCalledWith(endDate);
